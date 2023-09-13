@@ -4,6 +4,7 @@
 describe('Login Test', ()=>{
     it('Verify user can login with valid username and password - positive test', ()=>{
         cy.visit('https://qa.fgntreasury.gov.ng/auth/login')
+       // cy.visit(Cypress.env('baseUrl')+"/auth/login")
         cy.get('.nav-logo')
         cy.get(':nth-child(1) > .form-control > .no-outline').type('OAGF_ADMINN')
         cy.get(':nth-child(2) > .form-control > .no-outline').type('Simple@123')
